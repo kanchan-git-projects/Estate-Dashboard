@@ -1,29 +1,4 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const closeBtn = document.querySelector(".closebtn");
-//   const menuBtn = document.querySelector(".menu");
-//   const aside = document.querySelector("aside");
-
-//   // Function to hide the aside section
-//   function hideAside() {
-//     aside.style.display = "none";
-//   }
-
-//   // Function to show the aside section
-//   function showAside() {
-//     aside.style.display = "block";
-//   }
-
-//   // Event listener for close button
-//   closeBtn.addEventListener("click", function () {
-//     hideAside();
-//   });
-
-//   // Event listener for menu button
-//   menuBtn.addEventListener("click", function () {
-//     showAside();
-//   });
-// });
-
+//---- Menu button and close button function
 document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.querySelector(".menu");
   const closeBtn = document.querySelector(".closebtn");
@@ -39,3 +14,21 @@ document.addEventListener("DOMContentLoaded", function () {
     aside.classList.remove("active");
   });
 });
+
+// Light and dark mode toggle
+
+// Function to toggle between light and dark themes
+function toggleTheme() {
+  const body = document.body;
+  const themes = ["light", "dark"];
+  const activeTheme = body.classList.contains("dark") ? "dark" : "light";
+  const newTheme = activeTheme === "light" ? "dark" : "light";
+
+  // Remove the current theme and add the new theme
+  body.classList.remove(activeTheme);
+  body.classList.add(newTheme);
+}
+
+// Add event listeners to the theme icons
+document.getElementById("lightMode").addEventListener("click", toggleTheme);
+document.getElementById("darkMode").addEventListener("click", toggleTheme);

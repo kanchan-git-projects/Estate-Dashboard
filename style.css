@@ -12,7 +12,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  width: 100 vw;
+  width: 96%;
   height: 100 vh;
   font-size: 0.88 rem;
   user-select: none;
@@ -154,7 +154,7 @@ main input {
 
 main .date {
   display: inline-block;
-  background-color: rgb(241, 195, 178);
+  background-color: rgb(241, 165, 137);
   border-radius: 5px;
   margin-top: 1rem;
   padding: 0.5rem 1.6rem;
@@ -474,6 +474,7 @@ main .recent_order a {
   .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    width: 94%;
   }
 
   aside {
@@ -553,4 +554,96 @@ main .recent_order a {
   .sales-updates .item {
     padding: 1.2rem;
   }
+}
+
+/* dark mode */
+.dark .logo {
+  color: rgb(197, 193, 193);
+}
+
+.dark .date {
+  box-shadow: rgb(78, 76, 76) 0px 4px 5px;
+}
+
+.dark aside {
+  background-color: #8a8888;
+}
+
+.dark .sidebar a:hover {
+  color: #030303;
+}
+
+.dark .sidebar a h3 span.inbox {
+  color: rgb(36, 36, 54);
+}
+
+.dark .sidebar a.active {
+  border-left: 0.5rem solid rgb(83, 61, 134);
+  background-color: rgb(99, 91, 91);
+}
+.dark .date {
+  background-color: rgb(158, 155, 155);
+}
+
+.dark .sidebar a h3 span.inbox {
+  color: rgb(188, 188, 192);
+  background-color: #211951;
+}
+
+.dark main .insights > div {
+  background-color: rgb(158, 155, 155);
+  color: black;
+  box-shadow: rgb(78, 76, 76) 0px 4px 5px;
+}
+
+main .insights > div span {
+  background-color: rgb(99, 91, 91);
+  color: rgb(15, 15, 15);
+}
+
+main .insights h1 {
+  color: rgb(81, 62, 126);
+}
+
+main .insights h3 {
+  color: rgb(81, 62, 126);
+}
+
+.dark main .recent_order table {
+  background-color: rgb(99, 91, 91);
+  color: rgb(43, 42, 42);
+  box-shadow: rgb(78, 76, 76) 0px 4px 5px;
+}
+
+.dark main .recent_order tbody tr td {
+  color: rgb(170, 170, 170);
+  border-bottom: 1px solid rgb(223, 145, 117);
+}
+
+.dark .right-container .top .menu {
+  color: #1a1818;
+}
+
+.dark .right-container .top .theme {
+  background-color: #a19e9e;
+}
+
+.dark .recent-updates .update {
+  background-color: #8a8888;
+  box-shadow: rgb(78, 76, 76) 0px 4px 5px;
+}
+
+.dark .sales-updates .item {
+  background-color: rgb(155, 151, 150);
+  color: #211951;
+}
+
+.dark .sales-updates .add-item {
+  background-color: rgb(155, 151, 150);
+  color: #211951;
+}
+
+.dark .right-container .top .theme span:last-child {
+  background-color: #000;
+  color: #fff;
 }
