@@ -22,7 +22,9 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 14rem auto 14rem;
+  grid-template-columns: auto 3fr 1fr;
+
+  /* grid-template-columns: 14rem auto 14rem; */
   width: 96%;
   gap: 1rem;
   margin: 0 auto;
@@ -93,9 +95,10 @@ aside {
 .sidebar a {
   display: flex;
   gap: 1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   margin-top: 0.8rem;
-  padding: 0.2rem;
+  margin-right: 2rem;
+  padding: 0.4rem;
   color: rgb(48, 48, 112);
 }
 
@@ -461,7 +464,7 @@ main .recent_order a {
 }
 
 /* For Mobile Screens */
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -476,6 +479,92 @@ main .recent_order a {
   aside .top .closebtn {
     color: white;
     display: inline;
+  }
+
+  aside .top .main .insights {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.6rem;
+    padding: 40px;
+  }
+
+  main {
+    margin-top: 6rem;
+  }
+
+  .main .insights .recent_order {
+    padding: 30px;
+    margin: 0 auto;
+  }
+
+  .right-container .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 25px;
+    box-shadow: rgb(255, 247, 247) 0px 4px 6px;
+  }
+
+  .right-container .top .button {
+    display: inline-block;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    left: 1rem;
+  }
+
+  .right-container .top .profile {
+    position: absolute;
+    left: 70%;
+  }
+
+  .right-container .top .theme {
+    position: absolute;
+    left: 50%;
+  }
+  .right-container .recent-updates .update {
+    padding: 1.2rem;
+  }
+
+  .sales-updates .item {
+    padding: 1.2rem;
+  }
+} */
+
+@media screen and (max-width: 767px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  aside {
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+    z-index: 4;
+  }
+
+  aside.active {
+    width: 14rem;
+  }
+
+  aside .top .closebtn {
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    display: inline-block;
+    color: white;
   }
 
   aside .top .main .insights {
