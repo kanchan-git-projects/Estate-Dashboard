@@ -22,9 +22,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: auto 3fr 1fr;
-
-  /* grid-template-columns: 14rem auto 14rem; */
+  grid-template-columns: 1fr 3fr 1fr;
   width: 96%;
   gap: 1rem;
   margin: 0 auto;
@@ -62,6 +60,10 @@ aside {
   padding-left: 5px;
 }
 
+aside:hover {
+  transform: scaleX(1); /* Adjust the scaling factor as needed */
+}
+
 .top {
   margin-top: 1rem;
   display: flex;
@@ -95,9 +97,8 @@ aside {
 .sidebar a {
   display: flex;
   gap: 1rem;
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   margin-top: 0.8rem;
-  margin-right: 2rem;
   padding: 0.4rem;
   color: rgb(48, 48, 112);
 }
@@ -158,6 +159,10 @@ main .date {
   margin-top: 1rem;
   padding: 0.5rem 1.6rem;
   box-shadow: rgb(247, 228, 228) 0px 4px 5px;
+}
+
+main .date input {
+  color: rgb(25, 4, 100);
 }
 
 main .insights {
@@ -464,78 +469,6 @@ main .recent_order a {
 }
 
 /* For Mobile Screens */
-/* @media screen and (max-width: 767px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  aside {
-    width: 14rem;
-    position: fixed;
-    z-index: 4;
-  }
-
-  aside .top .closebtn {
-    color: white;
-    display: inline;
-  }
-
-  aside .top .main .insights {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1.6rem;
-    padding: 40px;
-  }
-
-  main {
-    margin-top: 6rem;
-  }
-
-  .main .insights .recent_order {
-    padding: 30px;
-    margin: 0 auto;
-  }
-
-  .right-container .top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    padding: 25px;
-    box-shadow: rgb(255, 247, 247) 0px 4px 6px;
-  }
-
-  .right-container .top .button {
-    display: inline-block;
-    border-color: transparent;
-    cursor: pointer;
-    color: white;
-    position: absolute;
-    left: 1rem;
-  }
-
-  .right-container .top .profile {
-    position: absolute;
-    left: 70%;
-  }
-
-  .right-container .top .theme {
-    position: absolute;
-    left: 50%;
-  }
-  .right-container .recent-updates .update {
-    padding: 1.2rem;
-  }
-
-  .sales-updates .item {
-    padding: 1.2rem;
-  }
-} */
 
 @media screen and (max-width: 767px) {
   .container {
@@ -545,11 +478,12 @@ main .recent_order a {
 
   aside {
     width: 0;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
     overflow-x: hidden;
+    overflow-y: auto;
     transition: width 0.3s ease;
     z-index: 4;
   }
@@ -567,11 +501,9 @@ main .recent_order a {
     color: white;
   }
 
-  aside .top .main .insights {
+  main .insights {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    gap: 1.6rem;
-    padding: 40px;
   }
 
   main {
