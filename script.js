@@ -32,3 +32,9 @@ function toggleTheme() {
 // Add event listeners to the theme icons
 document.getElementById("lightMode").addEventListener("click", toggleTheme);
 document.getElementById("darkMode").addEventListener("click", toggleTheme);
+
+// touchstart
+document
+  .getElementById("lightMode")
+  .addEventListener("touchstart", toggleTheme);
+document.getElementById("darkMode").addEventListener("touchstart", toggleTheme);

@@ -474,7 +474,7 @@ main .recent_order a {
   .container {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    width: 94%;
+    width: 100 vw;
   }
 
   aside {
@@ -596,16 +596,16 @@ main .recent_order a {
   box-shadow: rgb(78, 76, 76) 0px 4px 5px;
 }
 
-main .insights > div span {
+.dark main .insights > div span {
   background-color: rgb(99, 91, 91);
   color: rgb(15, 15, 15);
 }
 
-main .insights h1 {
+.dark main .insights h1 {
   color: rgb(81, 62, 126);
 }
 
-main .insights h3 {
+.dark main .insights h3 {
   color: rgb(81, 62, 126);
 }
 
